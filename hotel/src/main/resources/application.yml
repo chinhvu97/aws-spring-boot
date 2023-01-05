@@ -1,12 +1,17 @@
 spring:
-    data:
-      mongodb:
-        authentication-database: admin
-        username: admin
-        password: admin
-        database: hotel
-        port: 27017
-        host: ${SERVER_HOST}
+  jpa:
+    database: POSTGRESQL
+    show-sql: true
+    hibernate:
+      ddl-auto: create-drop
+  datasource:
+    url: jdbc:postgresql://localhost:5432/traveloka
+    username: postgres
+    password: postgres
+    driverClassName: org.postgresql.Driver
+  sql:
+    init:
+      platform: postgres
 logging:
   level:
     org:

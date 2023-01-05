@@ -1,8 +1,8 @@
 package co.jp.hotel.hotel;
 
-import org.springframework.data.mongodb.repository.MongoRepository;
+import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
 @Repository
-public interface HotelRepo extends MongoRepository<Hotel, String> {
+public interface HotelRepo extends JpaRepository<Hotel, String> {
 }

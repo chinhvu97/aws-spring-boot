@@ -1,10 +1,10 @@
 package co.jp.hotel.hotel;
 
+import jakarta.persistence.Entity;
+import jakarta.persistence.Id;
 import lombok.*;
-import org.springframework.data.annotation.Id;
-import org.springframework.data.mongodb.core.mapping.Document;
 
-@Document
+@Entity
 @ToString
 @AllArgsConstructor
 @NoArgsConstructor
@@ -20,9 +20,4 @@ public class Hotel {
 
   private String address;
 
-  public Hotel(String name, Integer star, String address) {
-    this.name = name;
-    this.star = star;
-    this.address = address;
-  }
 }
