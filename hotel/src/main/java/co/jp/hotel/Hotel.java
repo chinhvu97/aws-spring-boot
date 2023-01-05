@@ -4,8 +4,6 @@ import lombok.*;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 
-import java.time.LocalDate;
-
 @Document
 @ToString
 @AllArgsConstructor
@@ -21,4 +19,10 @@ public class Hotel {
   private Integer star;
 
   private String address;
+
+  public Hotel(String name, Integer star, String address) {
+    this.name = name;
+    this.star = star;
+    this.address = address;
+  }
 }

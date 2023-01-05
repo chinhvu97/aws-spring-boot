@@ -1,0 +1,17 @@
+spring:
+    data:
+      mongodb:
+        authentication-database: admin
+        username: admin
+        password: admin
+        database: hotel
+        port: 27017
+        host: localhost
+logging:
+  level:
+    org:
+      springframework:
+        data:
+          mongodb:
+            core:
+              MongoTemplate: DEBUG
