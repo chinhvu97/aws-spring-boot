@@ -6,7 +6,7 @@ spring:
         password: admin
         database: hotel
         port: 27017
-        host: localhost
+        host: ${SERVER_HOST}
 logging:
   level:
     org:

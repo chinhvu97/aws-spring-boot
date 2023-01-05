@@ -1,5 +1,7 @@
-package co.jp.hotel;
+package co.jp.hotel.listener;
 
+import co.jp.hotel.hotel.Hotel;
+import co.jp.hotel.hotel.HotelRepo;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.ApplicationListener;

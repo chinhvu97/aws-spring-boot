@@ -1,4 +1,4 @@
-package co.jp.hotel;
+package co.jp.hotel.hotel;
 
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
