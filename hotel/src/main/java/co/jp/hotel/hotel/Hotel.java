@@ -1,6 +1,8 @@
 package co.jp.hotel.hotel;
 
 import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import lombok.*;
 
@@ -12,7 +14,8 @@ import lombok.*;
 @Getter
 public class Hotel {
   @Id
-  private String id;
+  @GeneratedValue(strategy = GenerationType.IDENTITY)
+  private Long id;
 
   private String name;
 
@@ -20,4 +23,9 @@ public class Hotel {
 
   private String address;
 
+  public Hotel(String name, Integer star, String address) {
+    this.name = name;
+    this.star = star;
+    this.address = address;
+  }
 }

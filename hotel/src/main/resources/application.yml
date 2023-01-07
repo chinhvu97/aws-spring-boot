@@ -1,22 +1,26 @@
 spring:
+  profiles:
+    active: ${PROFILE.ACTIVE}
   jpa:
     database: POSTGRESQL
-    show-sql: true
     hibernate:
-      ddl-auto: create-drop
+      ddl-auto: none
   datasource:
-    url: jdbc:postgresql://localhost:5432/traveloka
-    username: postgres
-    password: postgres
+    url: ${DATABASE_URL}
+    username: ${DATABASE_USERNAME}
+    password: ${DATABASE_PASSWORD}
     driverClassName: org.postgresql.Driver
   sql:
     init:
       platform: postgres
+  liquibase:
+    change-log: classpath:db/master.xml
 logging:
   level:
     org:
-      springframework:
-        data:
-          mongodb:
-            core:
-              MongoTemplate: DEBUG
+      hibernate:
+        SQL: DEBUG
+        type:
+          descriptor:
+            sql:
+              BasicBinder: TRACE

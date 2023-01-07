@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-4.1.xsd">
+
+    <changeSet id="20230501_booking" author="chinh.vumanh">
+
+        <createTable tableName="booking">
+            <column name="id" type="bigint"/>
+            <column name="hotel_id" type="bigint"/>
+            <column name="user_id" type="bigint"/>
+            <column name="booking_date" type="bigint"/>
+        </createTable>
+
+        <addPrimaryKey tableName="booking" columnNames="id"/>
+        <addAutoIncrement columnDataType="bigint" tableName="booking" columnName="id"/>
+
+    </changeSet>
+
+</databaseChangeLog>

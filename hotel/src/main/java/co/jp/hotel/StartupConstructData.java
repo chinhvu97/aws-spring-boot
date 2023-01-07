@@ -10,7 +10,6 @@ import org.springframework.stereotype.Component;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.UUID;
 
 @Component
 @Slf4j
@@ -23,10 +22,10 @@ public class StartupConstructData implements ApplicationListener<ContextRefreshe
     if (hotelRepo.findAll().isEmpty()) {
       log.info("Starting init data...");
       List<Hotel> hotelList = new ArrayList<>();
-      hotelList.add(new Hotel(UUID.randomUUID().toString(), "Lotte Hotel Hanoi", 5, "Hanoi"));
-      hotelList.add(new Hotel(UUID.randomUUID().toString(), "Sofitel Lengend Metropole", 5, "Hanoi"));
-      hotelList.add(new Hotel(UUID.randomUUID().toString(), "Grand Plaza Hanoi", 5, "Hanoi"));
-      hotelList.add(new Hotel(UUID.randomUUID().toString(), "Anatole Hanoi", 5, "Hanoi"));
+      hotelList.add(new Hotel("Lotte Hotel Hanoi", 5, "Hanoi"));
+      hotelList.add(new Hotel("Sofitel Lengend Metropole", 5, "Hanoi"));
+      hotelList.add(new Hotel("Grand Plaza Hanoi", 5, "Hanoi"));
+      hotelList.add(new Hotel("Anatole Hanoi", 5, "Hanoi"));
       hotelRepo.saveAll(hotelList);
     }
   }
