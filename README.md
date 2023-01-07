@@ -15,7 +15,7 @@ Build app
 
 Run app on the same network:
 
-```docker run --name hotel-service -p 8080:8080 --network my-net -e SERVER_HOST=mongo -d hotel-service:0.0.1```
+```docker run --name traveloka-backend -p 8080:8080 --network my-net -e SERVER_HOST=postgres traveloka-backend```
 
 ```docker run  --name postgres --network my-net -p 5432:5432 -e POSTGRES_PASSWORD=postgres -e POSTGRES_DB=traveloka -d postgres```
 
