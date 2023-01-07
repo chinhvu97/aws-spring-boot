@@ -6,9 +6,9 @@ spring:
     hibernate:
       ddl-auto: none
   datasource:
-    url: ${DATABASE_URL}
-    username: ${DATABASE_USERNAME}
-    password: ${DATABASE_PASSWORD}
+    url: jdbc:postgresql://${SERVER_HOST:localhost}:${SERVER_PORT:5432}/${DB_NAME:traveloka}
+    username: ${DATABASE_USERNAME:postgres}
+    password: ${DATABASE_PASSWORD:postgres}
     driverClassName: org.postgresql.Driver
   sql:
     init:
