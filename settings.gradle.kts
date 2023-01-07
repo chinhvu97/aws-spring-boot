@@ -1,1 +1,1 @@
-rootProject.name = "hotel-service"
+rootProject.name = "traveloka-backend"
