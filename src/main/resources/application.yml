@@ -15,6 +15,10 @@ spring:
       platform: postgres
   liquibase:
     change-log: classpath:db/master.xml
+
+server:
+  port: 8000
+
 logging:
   level:
     org:
