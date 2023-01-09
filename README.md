@@ -19,7 +19,11 @@ Run app on the same network:
 
 ```docker run  --name postgres --network my-net -p 5432:5432 -e POSTGRES_PASSWORD=postgres -e POSTGRES_DB=traveloka -d postgres```
 
+
+```http://jenkin-demo.traveloka.com:8080/github-webhook```
+
 ### BUILD
 PRJ uses gradle kts as build tool.
 Liquibase, Postgres as Database management sys
+
 
